@@ -48,6 +48,7 @@ function App() {
               screenOptions={{
               activeTintColor: '#EA1B51', // Set active tab text color to match icon color
               headerShown: false,
+              color: '#16161d'
                   
           }}>
           <Tab.Screen

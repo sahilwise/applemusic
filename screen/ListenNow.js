@@ -1,11 +1,10 @@
 import { View, Text, Image, ScrollView, TouchableOpacity } from "react-native";
 import { LinearGradient } from 'expo-linear-gradient';
-import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'; // Import the necessary icon library
+import Entypo from 'react-native-vector-icons/Entypo'; // Import the necessary icon library
 import tw from 'twrnc';
 
 const ListenNow = () => {
     return (
-        <ScrollView>
         <LinearGradient
             // Button Linear Gradient
             colors={['#D20962', '#C6055C', '#960545']}
@@ -22,31 +21,42 @@ const ListenNow = () => {
             </View>
 
 
+            <View style={tw`bg-[#F5108E] py-1.5 rounded-full mx-8`} />
 
-
-
-            <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', paddingTop: 20, paddingBottom: 296 }}>
+            <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', paddingTop: 40, paddingBottom:36 }}>
             {/* Previous Button */}
             <TouchableOpacity onPress={() => console.log('Previous')}>
-                <FontAwesome5 name="step-backward" size={54} color="white" style={{ marginHorizontal: 20 }} />
+                <Entypo name="controller-fast-backward" size={54} color="white" style={{ marginHorizontal: 20 }} />
             </TouchableOpacity>
 
             {/* Play Button */}
             <TouchableOpacity onPress={() => console.log('Play')}>
-                <FontAwesome5 name="pause" size={54} color="white" style={{ marginHorizontal: 20 }} />
+                <Entypo name="controller-paus" size={54} color="white" style={{ marginHorizontal: 20 }} />
             </TouchableOpacity>
 
             {/* Next Button */}
             <TouchableOpacity onPress={() => console.log('Next')}>
-                <FontAwesome5 name="step-forward" size={54} color="white" style={{ marginHorizontal: 20 }} />
+                <Entypo name="controller-fast-forward" size={54} color="white" style={{ marginHorizontal: 20 }} />
             </TouchableOpacity>
         </View>
 
 
 
 
+      <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+    <Image
+        style={{
+            width: 369, // Adjust as needed
+            height: 192, // Adjust as needed
+            borderRadius: 20, // Adjust as needed
+        }}
+        source={{ uri: 'https://i.pinimg.com/564x/54/c7/29/54c729205c65724ef0d49afa257d0d76.jpg' }} // Replace with your image URI
+    />
+      </View>
+
+
+
         </LinearGradient>
-        </ScrollView>
     )
 }
 
